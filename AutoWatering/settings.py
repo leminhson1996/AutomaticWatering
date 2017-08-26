@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')x&r4sy#@)i7&a=98km1nugz)ce&fb7529t0a5+3sj#(hj-6u$'
+SECRET_KEY = '&c(^%yrg2&jo$#y9q9ru%ju+n(r)o5na)o_n%dsb8%w@swg06$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,16 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # third-party app
-    'channels',
-    # built-in app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 ]
 
 MIDDLEWARE = [
@@ -79,8 +75,12 @@ WSGI_APPLICATION = 'AutoWatering.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'autowatering',
+        'USER': 'leminhson',
+        'PASSWORD': '@Leminhson1996',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
